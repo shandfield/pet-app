@@ -7,29 +7,29 @@ import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
 
-function Books() {
+function Animal() {
   // Setting our component's initial state
-  const [books, setBooks] = useState([])
+  const [animal, setAnimal] = useState([])
   const [formObject, setFormObject] = useState({})
 
-  // Load all books and store them with setBooks
+  // Load all animals and store them with setAnimals
   useEffect(() => {
-    loadBooks()
+    loadAnimal()
   }, [])
 
-  // Loads all books and sets them to books
-  function loadBooks() {
-    API.getBooks()
+  // Loads all animals and sets them to animals
+  function loadAnimal() {
+    API.getAnimal()
       .then(res => 
-        setBooks(res.data)
+        setAnimal(res.data)
       )
       .catch(err => console.log(err));
   };
 
-  // Deletes a book from the database with a given id, then reloads books from the db
-  function deleteBook(id) {
-    API.deleteBook(id)
-      .then(res => loadBooks())
+  // Deletes a animal from the database with a given id, then reloads animals from the db
+  function deleteAnimal(id) {
+    API.deleteAnimal(id)
+      .then(res => loadAnimal())
       .catch(err => console.log(err));
   }
 
@@ -39,17 +39,18 @@ function Books() {
     setFormObject({...formObject, [name]: value})
   };
 
-  // When the form is submitted, use the API.saveBook method to save the book data
-  // Then reload books from the database
+  // When the form is submitted, use the API.saveAnimal method to save the animal data
+  // Then reload animals from the database
   function handleFormSubmit(event) {
     event.preventDefault();
-    if (formObject.title && formObject.author) {
-      API.saveBook({
-        title: formObject.title,
-        author: formObject.author,
-        synopsis: formObject.synopsis
+    if (formObject.name && formObject.type && formObject.DOB && formObject.notes) {
+      API.saveAnimal({
+        name: formObject.name,
+        type: formObject.type,
+        DOB: formObject.DOB,
+        notes: formObject.notes
       })
-        .then(res => loadBooks())
+        .then(res => loadAnimal())
         .catch(err => console.log(err));
     }
   };
@@ -59,46 +60,51 @@ function Books() {
         <Row>
           <Col size="md-6">
             <Jumbotron>
-              <h1>What Books Should I Read?</h1>
+              <h1>Please Enter your Pets Information</h1>
             </Jumbotron>
             <form>
               <Input
                 onChange={handleInputChange}
-                name="title"
-                placeholder="Title (required)"
+                name="name"
+                placeholder="Name (required)"
               />
               <Input
                 onChange={handleInputChange}
-                name="author"
-                placeholder="Author (required)"
+                name="type"
+                placeholder="Type (required)"
+              />
+              <Input
+                onChange={handleInputChange}
+                name="DOB"
+                placeholder="DOB (required)"
               />
               <TextArea
                 onChange={handleInputChange}
-                name="synopsis"
-                placeholder="Synopsis (Optional)"
+                name="notes"
+                placeholder="Notes regarding your pet:"
               />
               <FormBtn
-                disabled={!(formObject.author && formObject.title)}
+                disabled={!(formObject.name && formObject.type && formObject.DOB && formObject.notes)}
                 onClick={handleFormSubmit}
               >
-                Submit Book
+                Submit Information
               </FormBtn>
             </form>
           </Col>
           <Col size="md-6 sm-12">
             <Jumbotron>
-              <h1>Books On My List</h1>
+              <h1>List of Saved Pets</h1>
             </Jumbotron>
-            {books.length ? (
+            {animal.length ? (
               <List>
-                {books.map(book => (
-                  <ListItem key={book._id}>
-                    <Link to={"/books/" + book._id}>
+                {animal.map(animal => (
+                  <ListItem key={animal._id}>
+                    <Link to={"/animal/" + animal._id}>
                       <strong>
-                        {book.title} by {book.author}
+                        {animal.name} is a {animal.type}, their DOB is {animal.DOB}. These are the notes: {animal.notes}.
                       </strong>
                     </Link>
-                    <DeleteBtn onClick={() => deleteBook(book._id)} />
+                    <DeleteBtn onClick={() => deleteAnimal(animal._id)} />
                   </ListItem>
                 ))}
               </List>
@@ -112,4 +118,4 @@ function Books() {
   }
 
 
-export default Books;
+export default Animal;
