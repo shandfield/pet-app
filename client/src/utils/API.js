@@ -6,7 +6,7 @@ export default {
     return axios.get("/api/animal");
   },
   // Gets the animal with the given id
-  getAnimal: function(id) {
+  getAnimalid: function(id) {
     return axios.get("/api/animal/" + id);
   },
   // Deletes the animals with the given id
@@ -15,6 +15,6 @@ export default {
   },
   // Saves a animal to the database
   saveAnimal: function(animalData) {
-    return axios.post("/api/animal", animalData);
+    return axios.post("/api/animal/", animalData);
   }
 };

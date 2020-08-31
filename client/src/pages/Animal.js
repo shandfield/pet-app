@@ -9,7 +9,7 @@ import { Input, TextArea, FormBtn } from "../components/Form";
 
 function Animal() {
   // Setting our component's initial state
-  const [Animal, setAnimal] = useState([])
+  const [animal, setAnimal] = useState([])
   const [formObject, setFormObject] = useState({})
 
   // Load all animals and store them with setAnimals
