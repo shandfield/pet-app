@@ -85,7 +85,7 @@ function Animal() {
               />
               <FormBtn
                 disabled={!(formObject.name && formObject.type && formObject.DOB && formObject.notes)}
-                onClick={handleFormSubmit}
+                onClick= {() => handleFormSubmit}
               >
                 Submit Information
               </FormBtn>
