@@ -22,7 +22,7 @@ function Detail(props) {
           <Col size="md-12">
             <Jumbotron>
               <h1>
-              {animal.name} is a {animal.type}, their DOB is {animal.DOB}. 
+              {animal.name} is a {animal.type}, their date of birth is {animal.dateOfBirth}. 
               </h1>
             </Jumbotron>
           </Col>

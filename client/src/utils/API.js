@@ -2,11 +2,11 @@ import axios from "axios";
 
 export default {
   // Gets all animals
-  getAnimal: function() {
+  getAnimals: function() {
     return axios.get("/api/animal");
   },
   // Gets the animal with the given id
-  getAnimalid: function(id) {
+  getAnimal: function(id) {
     return axios.get("/api/animal/" + id);
   },
   // Deletes the animals with the given id

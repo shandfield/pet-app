@@ -12,31 +12,31 @@ const animalSeed = [
   {
     name: "Chippy",
     type: "Dog",
-    DOB:"09.06.2017",
+    dateOfBirth:"09/06/2017",
     Notes: "Hyper little guy! Will be 3 in a week!!"
   },
   {
     name: "Bulma",
     type: "Dog",
-    DOB:"04.20.2019",
+    dateOfBirth:"04202020",
     Notes: "Hyper active, fence jumper!"
   },
   {
     name: "Brennan",
     type: "Dog",
-    DOB:"04.01.2019",
+    dateOfBirth:"04.01.2019",
     Notes: "Very athletic and mouthy!"
   },
   {
     name: "Malone",
     type: "Cat",
-    DOB:"05.03.2017",
+    dateOfBirth:"05.03.2017",
     Notes: "Very active and likes to snuggle with his furry companion!"
   },
   {
     name: "Carlisle",
     type: "Honey-Badger",
-    DOB:"07.07.2015",
+    dateOfBirth:"07.07.2015",
     Notes: "He don't give no cares!"
   }
 ];

@@ -4,11 +4,9 @@ const Schema = mongoose.Schema;
 const AnimalSchema = new Schema({
   name: { type: String, required: true },
   type: { type: String, required: true },
-  synopsis: String,
-  DOB: { type: Date, default: Date.now },
+  dateOfBirth: {type: Date, required: true, trim: true},
   Notes: { type: String, required: true },
-  synopsis: String,
-});
+ });
 
 const Animal = mongoose.model("Animal", AnimalSchema);
 

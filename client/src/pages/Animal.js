@@ -19,7 +19,7 @@ function Animal() {
 
   // Loads all animals and sets them to animals
   function loadAnimal() {
-    API.getAnimal()
+    API.getAnimals()
       .then(res => 
         setAnimal(res.data)
       )
@@ -43,14 +43,15 @@ function Animal() {
   // Then reload animals from the database
   function handleFormSubmit(event) {
     event.preventDefault();
-    if (formObject.name && formObject.type && formObject.DOB && formObject.notes) {
+    if (formObject.name && formObject.type && formObject.dateOfBirth && formObject.notes) {
       API.saveAnimal({
         name: formObject.name,
         type: formObject.type,
-        DOB: formObject.DOB,
+        dateOfBirth: formObject.dateOfBirth,
         notes: formObject.notes
       })
-        .then(res => loadAnimal())
+        .then(res => console.log(res))
+          // loadAnimal())
         .catch(err => console.log(err));
     }
   };
@@ -75,8 +76,8 @@ function Animal() {
               />
               <Input
                 onChange={handleInputChange}
-                name="DOB"
-                placeholder="DOB (required)"
+                name="dateOfBirth"
+                placeholder="Date of Birth: (required)"
               />
               <TextArea
                 onChange={handleInputChange}
@@ -84,8 +85,8 @@ function Animal() {
                 placeholder="Notes regarding your pet:"
               />
               <FormBtn
-                disabled={!(formObject.name && formObject.type && formObject.DOB && formObject.notes)}
-                onClick= {() => handleFormSubmit}
+                disabled={!(formObject.name && formObject.type && formObject.dateOfBirth && formObject.notes)}
+                onClick= {handleFormSubmit}
               >
                 Submit Information
               </FormBtn>
@@ -101,7 +102,7 @@ function Animal() {
                   <ListItem key={animal._id}>
                     <Link to={"/animal/" + animal._id}>
                       <strong>
-                        {animal.name} is a {animal.type}, their DOB is {animal.DOB}. These are the notes: {animal.notes}.
+                        {animal.name} is a {animal.type}, that was born on {animal.dateOfBirth}. These are the notes: {animal.notes}.
                       </strong>
                     </Link>
                     <DeleteBtn onClick={() => deleteAnimal(animal._id)} />
