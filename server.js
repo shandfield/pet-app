@@ -17,7 +17,7 @@ app.use(routes);
 
 // Connect to the Mongo DB
 //mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/animal");
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/animal";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/reactanimallist";
   mongoose.connect(MONGODB_URI);
 
 // Start the API server
