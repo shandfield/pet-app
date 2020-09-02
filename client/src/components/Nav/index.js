@@ -73,13 +73,6 @@ const PetNav = (props) => {
       </Navbar>
     </NavWrapper>
   );
-//   return (
-//     <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-//       <a className="navbar-brand" href="/">
-//         React Animal List
-//       </a>
-//     </nav>
-//   );
 }
 
 export default PetNav;
