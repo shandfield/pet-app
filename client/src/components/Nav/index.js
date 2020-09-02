@@ -28,7 +28,7 @@ const PetNav = (props) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="/components/">Your Pets</NavLink>
+              <NavLink href="../pages/UserPets">Your Pets</NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="https://github.com/reactstrap/reactstrap">Calendar</NavLink>
