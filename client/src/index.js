@@ -1,11 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
-<<<<<<< HEAD
 import { Auth0Provider } from "@auth0/auth0-react";
-=======
 import 'bootstrap/dist/css/bootstrap.min.css';
->>>>>>> master
 
 
 
