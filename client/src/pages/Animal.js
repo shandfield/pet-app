@@ -60,7 +60,7 @@ function Animal() {
         <Row>
           <Col size="md-6">
             <Jumbotron>
-              <h1>Please Enter your Pets Information</h1>
+              <h1>Please Enter Your Pets Information</h1>
             </Jumbotron>
             <form>
               <Input
