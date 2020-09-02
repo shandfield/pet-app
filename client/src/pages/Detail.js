@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
+import styled from "styled-components";
 
 function Detail(props) {
   const [animal, setAnimal] = useState({})
