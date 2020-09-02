@@ -50,8 +50,10 @@ function Animal() {
         dateOfBirth: formObject.dateOfBirth,
         notes: formObject.notes
       })
-        .then(res => console.log(res))
-          // loadAnimal())
+        .then(res => {
+          loadAnimal();
+          setFormObject({name:"", type: "", dateOfBirth: "", notes: ""})
+        })
         .catch(err => console.log(err));
     }
   };
@@ -68,21 +70,25 @@ function Animal() {
                 onChange={handleInputChange}
                 name="name"
                 placeholder="Name (required)"
+                value= {formObject.name}
               />
               <Input
                 onChange={handleInputChange}
                 name="type"
                 placeholder="Type (required)"
+                value= {formObject.type}
               />
               <Input
                 onChange={handleInputChange}
                 name="dateOfBirth"
-                placeholder="Date of Birth: (required)"
+                placeholder="Date of Birth: (required in 00/00/0000)"
+                value= {formObject.dateOfBirth}
               />
               <TextArea
                 onChange={handleInputChange}
                 name="notes"
                 placeholder="Notes regarding your pet:"
+                value= {formObject.notes}
               />
               <FormBtn
                 disabled={!(formObject.name && formObject.type && formObject.dateOfBirth && formObject.notes)}
