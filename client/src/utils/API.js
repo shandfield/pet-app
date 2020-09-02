@@ -16,5 +16,9 @@ export default {
   // Saves a animal to the database
   saveAnimal: function(animalData) {
     return axios.post("/api/animal/", animalData);
+  },
+  //Updating a animals information to the database
+  updateAnimal: function(animalData){
+    return axios.post("/api/animal/:id", animalData)
   }
 };

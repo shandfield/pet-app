@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import DeleteBtn from "../components/DeleteBtn";
 import Jumbotron from "../components/Jumbotron";
+import UpdateBtn from "../components/UpdateBtn";
 import API from "../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
@@ -31,6 +32,13 @@ function Animal() {
     API.deleteAnimal(id)
       .then(res => loadAnimal())
       .catch(err => console.log(err));
+  }
+
+  //!Updates the animal from the database with a given id, then reloads the animal from the db
+  function updateAnimal (animalData){
+    API.updateAnimal(animalData)
+    .then(res => loadAnimal())
+    .catch(err => console.log(err));
   }
 
   // Handles updating component state when the user types into the input field
@@ -108,10 +116,11 @@ function Animal() {
                   <ListItem key={animal._id}>
                     <Link to={"/animal/" + animal._id}>
                       <strong>
-                        {animal.name} is a {animal.type}, that was born on {animal.dateOfBirth}. These are the notes: {animal.notes}.
+                        {animal.name} is a {animal.type}, that was born on {animal.dateOfBirth}. These are the notes: {animal.notes}
                       </strong>
                     </Link>
                     <DeleteBtn onClick={() => deleteAnimal(animal._id)} />
+                    <UpdateBtn onClick= {() => updateAnimal(animal._id)}/>
                   </ListItem>
                 ))}
               </List>
