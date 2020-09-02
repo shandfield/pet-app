@@ -3,13 +3,13 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Animal from "./pages/Animal";
 import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
-import Nav from "./components/Nav";
+import PetNav from "./components/Nav";
 
 function App() {
   return (
     <Router>
       <div>
-        <Nav />
+        <PetNav />
         <Switch>
           <Route exact path={["/", "/animal"]}>
             <Animal />
