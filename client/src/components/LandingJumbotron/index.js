@@ -1,7 +1,7 @@
 import React from "react";
 import { Jumbotron, Container } from "reactstrap";
 import styled from "styled-components";
-import dogimage from "../Images/whitedogonblue.jpg";
+import dogimage from "../Images/allanimals.jpg";
 
 
 
@@ -12,7 +12,14 @@ const JumboStyle = styled.article`
   background-image: url(${dogimage}) !important;
   color: ${jumboText};
   border: 1px solid;
+  height: 700px;
   margin-top: 10px;
+  text-align: center;
+}
+
+.lead-jumbo h1 {
+    font-size: 60px;
+    
 }
 
 `  
