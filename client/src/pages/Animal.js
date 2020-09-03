@@ -7,6 +7,22 @@ import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
+import styled from "styled-components";
+
+const backColor = "#82464b";
+const buTextColor = "#d2d6ce";
+const submitColor = "RGB(49, 107, 132)";
+const BackDrop = styled.article`
+ {
+  background-color: ${backColor}
+}
+.btn {
+  background-color: ${submitColor} !important;
+  opacity: 1;
+  color: ${buTextColor};
+  border-color: ${submitColor};
+}
+`
 
 function Animal() {
   // Setting our component's initial state
@@ -67,6 +83,7 @@ function Animal() {
   };
 
     return (
+      <BackDrop>
       <Container fluid>
         <Row>
           <Col size="md-6">
@@ -129,7 +146,7 @@ function Animal() {
             )}
           </Col>
         </Row>
-      </Container>
+      </Container></BackDrop>
     );
   }
 

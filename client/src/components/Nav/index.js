@@ -23,10 +23,11 @@ const NavWrapper = styled.article`
   
   .navbar {
     background-color: ${navColor} !important;
+    border: black;
     
   }
  .navbar a, span {
-   
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   color: ${navTextColor} !important;
 }`
 
