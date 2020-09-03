@@ -16,6 +16,9 @@ const BackDrop = styled.article`
  {
   background-color: ${backColor}
 }
+h1 {
+  font-family: 'Coming Soon', cursive;
+}
 .btn {
   background-color: ${submitColor} !important;
   opacity: 1;
