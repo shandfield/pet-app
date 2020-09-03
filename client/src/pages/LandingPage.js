@@ -9,6 +9,7 @@ const backColor = "#82464b";
 const buTextColor = "#d2d6ce";
 const submitColor = "RGB(49, 107, 132)";
 const BackDrop = styled.article`
+
  {
   background-color: ${backColor}
 }
@@ -19,6 +20,9 @@ const BackDrop = styled.article`
   border-color: ${submitColor};
   align: center;
   margin: 20px;
+}
+h1 {
+  font-family: 'Coming Soon', cursive;
 }
 `
 function Home () {
