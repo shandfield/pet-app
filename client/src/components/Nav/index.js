@@ -69,7 +69,7 @@ const PetNav = (props) => {
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
-          <NavbarText>Simple Text</NavbarText>
+          <NavbarText>Made with WOOF<span><i class="fas fa-heart"></i></span></NavbarText>
         </Collapse>
       </Navbar>
     </NavWrapper>

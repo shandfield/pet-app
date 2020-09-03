@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Animal from "./pages/Animal";
 import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
-import LandingPage from "./components/LandingPage";
+import LandingPage from "./pages/LandingPage";
 
 // import LoginButton from "./components/LogIn/loginbutton";
 // import LogoutButton from "./components/LogOut/logoutbutton";
@@ -15,11 +15,13 @@ function App() {
   return (
 
     <Router>
-      <LandingPage />
       <div>
         <PetNav />
         <Switch>
-          <Route exact path={["/", "/animal"]}>
+          <Route exact path="/">
+             <LandingPage />
+          </Route>
+          <Route exact path="/animal">
             <Animal />
           </Route>
           <Route exact path="/animal/:id">
