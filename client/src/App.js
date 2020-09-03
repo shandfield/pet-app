@@ -15,11 +15,13 @@ function App() {
   return (
 
     <Router>
+       <div>
+       <PetNav />
+       <Switch>
+          <Route exact path={"/"}>
       <LandingPage />
-      <div>
-        <PetNav />
-        <Switch>
-          <Route exact path={["/", "/animal"]}>
+      </Route>
+          <Route exact path={"/animal"}>
             <Animal />
           </Route>
           <Route exact path="/animal/:id">
