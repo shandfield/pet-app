@@ -15,6 +15,7 @@ import {
 } from "reactstrap";
 
 import styled from "styled-components";
+import LogoutButton from '../LogOut/logoutbutton';
 
 const navColor = "rgb(49, 107, 132)";
 const navTextColor = "#d2d6ce";
@@ -57,10 +58,17 @@ const PetNav = (props) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="../pages/UserPets">Your Pets</NavLink>
+              <NavLink href="./UserPets">Your Pets</NavLink>
             </NavItem>
 
             <NavItem>
+<<<<<<< HEAD
+              <NavLink target="_blank" href="https://github.com/reactstrap/reactstrap">Calendar</NavLink>
+            </NavItem>
+            <UncontrolledDropdown nav inNavbar>
+             <LogoutButton />
+           
+=======
               <NavLink href="https://github.com/reactstrap/reactstrap">
                 Calendar
               </NavLink>
@@ -75,6 +83,7 @@ const PetNav = (props) => {
                 <DropdownItem divider />
                 <DropdownItem>Reset</DropdownItem>
               </DropdownMenu>
+>>>>>>> master
             </UncontrolledDropdown>
           </Nav>
           <NavbarText className="woof">Made with WOOF &#9825;</NavbarText>
