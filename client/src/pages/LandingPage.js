@@ -35,6 +35,7 @@ function Home () {
         <SignUpButton />
         </BackDrop>
       </>  
+    
     )
 }
 
