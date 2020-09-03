@@ -1,7 +1,7 @@
 import React from "react";
 import LandingJumbotron from "../components/LandingJumbotron/index";
 import LoginButton from "../components/LogIn/loginbutton";
-import SignUpButton from "../components/LogIn/SignupButton";
+import SignUpButton from "../components/LogIn/signupbutton";
 import styled from "styled-components";
 
 
