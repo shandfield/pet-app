@@ -62,28 +62,11 @@ const PetNav = (props) => {
             </NavItem>
 
             <NavItem>
-<<<<<<< HEAD
               <NavLink target="_blank" href="https://github.com/reactstrap/reactstrap">Calendar</NavLink>
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
              <LogoutButton />
            
-=======
-              <NavLink href="https://github.com/reactstrap/reactstrap">
-                Calendar
-              </NavLink>
-            </NavItem>
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                Options
-              </DropdownToggle>
-              <DropdownMenu right>
-                <DropdownItem>Option 1</DropdownItem>
-                <DropdownItem>Option 2</DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem>Reset</DropdownItem>
-              </DropdownMenu>
->>>>>>> master
             </UncontrolledDropdown>
           </Nav>
           <NavbarText className="woof">Made with WOOF &#9825;</NavbarText>
