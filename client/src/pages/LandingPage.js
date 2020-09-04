@@ -30,10 +30,9 @@ function Home () {
     return (
        <> 
        <BackDrop>
-       <LandingJumbotron>
-         
-         <h1>Welcome to Pet App!</h1>
-         <h3>If you have an account, please log in. If you are new to Pet App, feel free to create an account!</h3>
+       <LandingJumbotron>  
+         <h1>Welcome to PetArray!</h1>
+         <h3>If you have an account, please log in. If you are new to PetArray, feel free to create an account!</h3>
        </LandingJumbotron>
         <LoginButton />
         <SignUpButton />
