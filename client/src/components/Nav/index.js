@@ -65,7 +65,7 @@ const PetNav = (props) => {
             </NavItem>
 
             <NavItem>
-              <NavLink target="_blank" href="https://github.com/reactstrap/reactstrap">Calendar</NavLink>
+              <NavLink href="./Calendar">Calendar</NavLink>
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
              <LogoutButton />

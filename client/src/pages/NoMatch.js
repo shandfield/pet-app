@@ -10,7 +10,7 @@ function NoMatch() {
           <Jumbotron>
             <h1>404 Page Not Found</h1>
             <h1>
-              <span role="img"><i class="fas fa-kiwi-bird"></i>
+              <span role="img"><i className="fas fa-kiwi-bird"></i>
               </span>
             </h1>
           </Jumbotron>
