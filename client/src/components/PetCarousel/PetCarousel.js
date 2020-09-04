@@ -12,20 +12,28 @@ import Chippy from "../Images/Chippy.jpeg";
 import Malone from "../Images/Malone.jpeg";
 import Brennan from "../Images/Brennan.jpg";
 import Bulma from "../Images/Bulma.jpg";
-import styled from "styled-components";
+import Leo from "../Images/Leo.png";
+
 
 const items = [
   {
     src: Carlisle,
     altText: 'Carlisle the Honey Badger',
-    caption: 'Honey Badger',
+    caption: 'Carlisle',
+    style: {height: "400px", width: "540px", margin: "auto"},
+    
+  },
+  {
+    src: Leo,
+    altText: 'Leo',
+    caption: 'Leo (the other one)',
     style: {height: "400px", width: "540px", margin: "auto"},
     
   },
   {
     src: Malone,
     altText: 'Malone the Cat',
-    caption: 'Cat',
+    caption: 'Malone',
     style: {height: "400px", width: "540px", margin: "auto"},
     
   },
@@ -44,26 +52,18 @@ const items = [
   {
     src: Brennan,
     altText: 'Brennan the Dog',
-    caption: 'dog',
+    caption: 'Brennan',
     style: {height: "400px", width: "540px", margin: "auto"},
     
   },
   {
     src: Bulma,
     altText: 'Bulma the Dog',
-    caption: 'dog',
+    caption: 'Bulma',
     style: {height: "400px", width: "540px", margin: "auto"},
     
   }
 ];
-
-const CaroStyle = styled.article`  
-  .carousel > .items > img  {
-    height: 360px;
-    width: 640px;
-  }
-
-`
 
 
 const PetCarousel = (props) => {
@@ -96,7 +96,7 @@ const PetCarousel = (props) => {
         key={item.src}
       >
         <img src={item.src} alt={item.altText} style={item.style} />
-        <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
+        <CarouselCaption captionHeader={item.caption} />
       </CarouselItem>
       
     );
