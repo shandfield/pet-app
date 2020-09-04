@@ -21,11 +21,13 @@ const NavWrapper = styled.article`
   .navbar {
     background-color: ${navColor} !important;
     border: black;
+    border-bottom: 2px solid rgb(118, 118, 118);
   }
 
   .petapp {
     font-family: "Coming Soon", cursive !important;
     font-size: 40px;
+    text-transform: none;
   }
 
   .woof {

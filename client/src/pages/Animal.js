@@ -34,6 +34,13 @@ h1 {
     rgb(195, 195, 195));
     font-family: 'Coming Soon', cursive;
 }
+// .animal-delete {
+//   color: red;
+// }
+// .animal-update {
+//   color: #316b84;
+// }
+
 `
 
 function Animal() {
@@ -100,7 +107,7 @@ function Animal() {
         <Row>
           <Col size="md-6">
             <Jumbotron>
-              <h1>Please Enter Your Pets Information</h1>
+              <h1>Please Enter Your Pet's Information</h1>
             </Jumbotron>
             <form>
               <Input

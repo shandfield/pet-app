@@ -9,7 +9,7 @@ const backColor = "#82464b";
 const buTextColor = "#d2d6ce";
 const submitColor = "RGB(49, 107, 132)";
 const BackDrop = styled.article`
-
+text-align: center;
  {
   background-color: ${backColor}
 }
