@@ -9,6 +9,7 @@ button {
   color: #d2d6ce;
   margin-left: 20px;
   border-radius: 10px;
+  font-family: 'Coming Soon', cursive;
 }
 
 `
