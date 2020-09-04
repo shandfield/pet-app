@@ -3,8 +3,6 @@ import { Jumbotron, Container } from "reactstrap";
 import styled from "styled-components";
 import dogimage from "../Images/allanimals.jpg";
 
-
-
 const jumboText = "#82464b";
 const JumboStyle = styled.article`
 
@@ -21,12 +19,9 @@ const JumboStyle = styled.article`
     font-size: 60px;
     
 }
-
 `  
 
-
 function LandingJumbotron({children}) {
-
 
   return (
     
@@ -34,8 +29,6 @@ function LandingJumbotron({children}) {
         <Jumbotron className="lead-jumbo">
           <Container >
             {children}
-            {/* <h1 className="display-3">Pets</h1>
-            <p className="lead">Enter your pet's information below!</p> */}
           </Container>
         </Jumbotron>
       </JumboStyle>
