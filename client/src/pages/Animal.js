@@ -24,6 +24,15 @@ h1 {
   opacity: 1;
   color: ${buTextColor};
   border-color: ${submitColor};
+  padding: 1px 6px;
+  font-size: 18px;
+  border-radius: 10px;
+  border-width: 2px;
+  border-style: outset;
+  border-color: -internal-light-dark (
+    rgb(118, 118, 118),
+    rgb(195, 195, 195));
+    font-family: 'Coming Soon', cursive;
 }
 `
 

@@ -6,6 +6,7 @@ import {
   CarouselIndicators,
   CarouselCaption
 } from 'reactstrap';
+import "./styles.css";
 import Carlisle from "../Images/Carlisle.jpg";
 import Charly from "../Images/Charly.png";
 import Chippy from "../Images/Chippy.jpeg";
@@ -108,6 +109,7 @@ const PetCarousel = (props) => {
       activeIndex={activeIndex}
       next={next}
       previous={previous}
+      // style={{ margin: "auto" }}
     >
       <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
       {slides}

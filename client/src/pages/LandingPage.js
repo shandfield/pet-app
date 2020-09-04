@@ -19,6 +19,7 @@ const BackDrop = styled.article`
   color: ${buTextColor};
   border-color: ${submitColor};
   align: center;
+  font-family: 'Coming Soon', cursive;
   margin: 20px;
   padding: 1px 6px;
   font-size: 18px;
