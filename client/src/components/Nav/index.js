@@ -8,9 +8,6 @@ import {
   NavItem,
   NavLink,
   UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
   NavbarText,
 } from "reactstrap";
 
@@ -52,13 +49,16 @@ const PetNav = (props) => {
     <NavWrapper>
       <Navbar color="light" light expand="md">
         <NavbarBrand className="petapp" href="/">
-          Pet App
+          PetArray
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
               <NavLink href="./UserPets">Your Pets</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="./Animal">Add Your Pet</NavLink>
             </NavItem>
 
             <NavItem>

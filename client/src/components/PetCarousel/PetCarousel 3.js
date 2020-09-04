@@ -6,9 +6,9 @@ import {
   CarouselIndicators,
   CarouselCaption
 } from 'reactstrap';
-import cat from "../Images/cat.jpg";
+import cat from "./Images/cat.jpg";
 import dog from "../Images/dog.jpg";
-import fatbird from "../Images/fatbird.png"
+import fatbird from "../Images/fatbird.png";
 
 const items = [
   {
