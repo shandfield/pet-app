@@ -1,4 +1,33 @@
 .carousel {
     width: 540px;
     margin: 0 auto;
+    padding-top: 10px;
+}
+
+h3 {
+    font-family: 'Coming Soon', cursive;
+    font-size: 18px;
+    color: #f2dfc1;
+}
+
+li {
+    color: #f2dfc1;
+}
+
+.active {
+    background-color: #f2dfc1 !important;
+}
+
+.caption {
+    background-color: #34170c; 
+    height: 75px;
+    font-family: 'Coming Soon', cursive;
+    font-size: 18px;
+    width: 400px;
+    border-radius: 10px;
+    border: 2px solid #d59b82;
+}
+
+.img {
+    border: 2px solid #d59b82;
 }

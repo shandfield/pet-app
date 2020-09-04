@@ -6,7 +6,7 @@ import "./style.css";
 function UpdateBtn(props) {
   return (
     <span className="update-btn" {...props} role="button" tabIndex="2">
-      U
+      &#9998;
     </span>
   );
 }
