@@ -39,6 +39,9 @@ const NavWrapper = styled.article`
       1px 1px 0 #000;
     color: ${navTextColor} !important;
   }
+
+
+
 `;
 
 const PetNav = (props) => {
