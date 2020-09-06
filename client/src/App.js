@@ -26,9 +26,9 @@ function App() {
           </Route>
           <Route exact path= "/calendar" component={Planner}>
           </Route>
-          {/* <Route>
+          <Route>
             <NoMatch />
-          </Route> */}
+          </Route>
         </Switch>
       </div>
     </Router>
