@@ -17,8 +17,13 @@ const JumboStyle = styled.article`
 
 .lead-jumbo h1 {
     font-size: 60px;
-    
+    color: #82464b;
 }
+
+.lead-jumbo h3 {
+  color: #82464b;
+}
+
 `  
 
 function LandingJumbotron({children}) {

@@ -21,47 +21,47 @@ const items = [
     src: Carlisle,
     altText: 'Carlisle the Honey Badger',
     caption: 'Carlisle',
-    style: {height: "400px", width: "540px", margin: "auto"},
+    style: {height: "400px", width: "540px", margin: "auto", border: "5px solid #34170c", borderRadius: "15px"},
     
   },
   {
     src: Leo,
     altText: 'Leo',
     caption: 'Leo (the other one)',
-    style: {height: "400px", width: "540px", margin: "auto"},
+    style: {height: "400px", width: "540px", margin: "auto", border: "5px solid #34170c", borderRadius: "15px"},
     
   },
   {
     src: Malone,
     altText: 'Malone the Cat',
     caption: 'Malone',
-    style: {height: "400px", width: "540px", margin: "auto"},
+    style: {height: "400px", width: "540px", margin: "auto", border: "5px solid #34170c", borderRadius: "15px"},
     
   },
   {
     src: Charly,
     altText: 'Charly the Dog',
     caption: 'Charly',
-    style: {height: "400px", width: "540px"}
+    style: {height: "400px", width: "540px", border: "5px solid #34170c", borderRadius: "15px"}
   },
   {
     src: Chippy,
     altText: 'Chippy the Dog',
     caption: 'Chippy',
-    style: {height: "400px", width: "540px"}
+    style: {height: "400px", width: "540px", border: "5px solid #34170c", borderRadius: "15px"}
   },
   {
     src: Brennan,
     altText: 'Brennan the Dog',
     caption: 'Brennan',
-    style: {height: "400px", width: "540px", margin: "auto"},
+    style: {height: "400px", width: "540px", margin: "auto", border: "5px solid #34170c", borderRadius: "15px"},
     
   },
   {
     src: Bulma,
     altText: 'Bulma the Dog',
     caption: 'Bulma',
-    style: {height: "400px", width: "540px", margin: "auto"},
+    style: {height: "400px", width: "540px", margin: "auto", border: "5px solid #34170c", borderRadius: "15px"},
     
   }
 ];
@@ -97,7 +97,7 @@ const PetCarousel = (props) => {
         key={item.src}
       >
         <img src={item.src} alt={item.altText} style={item.style} />
-        <CarouselCaption captionHeader={item.caption} />
+        <CarouselCaption className="caption" captionHeader={item.caption} />
       </CarouselItem>
       
     );
@@ -109,14 +109,12 @@ const PetCarousel = (props) => {
       activeIndex={activeIndex}
       next={next}
       previous={previous}
-      // style={{ margin: "auto" }}
     >
       <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
       {slides}
       <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
       <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
     </Carousel>
-   
   );
 }
 
