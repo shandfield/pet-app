@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import DeleteBtn from "../components/DeleteBtn";
 import Jumbotron from "../components/Jumbotron";
-import UpdateBtn from "../components/UpdateBtn";
+// import UpdateBtn from "../components/UpdateBttn";
 import API from "../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
@@ -70,8 +70,8 @@ function Animal() {
   }
 
   //!Updates the animal from the database with a given id, then reloads the animal from the db
-  function updateAnimal (animalData){
-    API.updateAnimal(animalData)
+  function updateAnimal(id) {
+    API.updateAnimal(id)
     .then(res => loadAnimal())
     .catch(err => console.log(err));
   }
@@ -156,7 +156,8 @@ function Animal() {
                       </strong>
                     </Link>
                     <DeleteBtn onClick={() => deleteAnimal(animal._id)} />
-                    <UpdateBtn onClick= {() => updateAnimal(animal._id)}/>
+                    {/* <Button onClick= {this.editAnimal}>Edit Information</Button> */}
+                    {/* <UpdateBtn onClick= {() => updateAnimal(animal._id)}/> */}
                   </ListItem>
                 ))}
               </List>
