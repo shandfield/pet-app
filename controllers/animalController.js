@@ -24,7 +24,8 @@ module.exports = {
   },
   update: function(req, res) {
     db.Animal
-      .findOneAndUpdate({ _id: req.params.id }, req.body)
+      .findByIdAndUpdate({ _id: req.params.id }, req.body)
+      .then(dbModel => dbModel.update())
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
