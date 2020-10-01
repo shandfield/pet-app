@@ -7,6 +7,7 @@ import LandingPage from "./pages/LandingPage";
 import PetNav from "./components/Nav";
 import UserPets from "./pages/UserPets";
 import Planner from "./pages/Calendar";
+import UpdateAnimal from "./pages/Update";
 
 
 function App() {
@@ -16,16 +17,12 @@ function App() {
       <div>
         <PetNav />
         <Switch>
-          <Route exact path="/" component={LandingPage}>
-          </Route>
-          <Route exact path="/animal" component={Animal}>
-          </Route>
-          <Route exact path="/UserPets" component={UserPets}>
-          </Route>
-          <Route exact path="/animal/:id" component={Detail}>
-          </Route>
-          <Route exact path= "/calendar" component={Planner}>
-          </Route>
+          <Route exact path="/" component={LandingPage}/>
+          <Route exact path="/animal" component={Animal}/>
+          <Route exact path="/UserPets" component={UserPets}/>
+          <Route exact path="/animal/:id" component={Detail}/>
+          <Route exact path= "/animal/update/:animalId" component={UpdateAnimal}/>
+          <Route exact path= "/calendar" component={Planner}/>
           <Route>
             <NoMatch />
           </Route>
